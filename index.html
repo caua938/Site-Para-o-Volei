@@ -1,42 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat em tempo real</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Login - Vôlei</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="login" class="card">
+    <h1>LOGIN</h1>
     
-    <section class="container">
-        <section class="login">
-            <h2>Login</h2>
-            <form class="login__form">
-                <input type="text" class="login__input" placeholder="Seu nome" required>
-                <button type="submit" class="login__button">Entrar</button>
-            </form>
-        </section>
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" placeholder="Nome">
 
-        <section class="chat">
-            <section class="chat__messages">
+    <label for="idade">Idade</label>
+    <input type="number" id="idade" placeholder="Idade">
 
-            <!--<div class="message--self">Hello, World</div>
+    <button onclick="entrar()">Entrar</button>
+  </div>
 
-                <div class="message--other">
-                    <span class="message--sender">Manual do Devr</span>
-                    Ola, Mundo
-                </div>-->
+  <div id="main" class="card hidden">
+    <h2>VÔLEI - Sexta</h2>
+    <p>Lista de quem vai:</p>
 
-            </section>
+    <label for="nomeInput">Nome</label>
+    <input type="text" id="nomeInput" placeholder="Nome">
+    <button onclick="adicionar()">Adicionar</button>
 
-            <form class="chat__form">
-                <input type="text" class="chat__input" placeholder="Digite seu nome" required>
-                <button type="submit" class="chat__button"><i class="fa-solid fa-paper-plane"></i></button>
-            </form>
-        </section>
-    </section>
+    <div id="lista"></div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
